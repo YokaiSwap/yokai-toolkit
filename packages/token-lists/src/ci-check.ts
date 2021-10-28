@@ -1,30 +1,30 @@
-import srcDefault from "./tokens/pancakeswap-default.json";
-import srcExtended from "./tokens/pancakeswap-extended.json";
-import srcTop100 from "./tokens/pancakeswap-top-100.json";
-import srcTop15 from "./tokens/pancakeswap-top-15.json";
-import defaultList from "../lists/pancakeswap-default.json";
-import extendedtList from "../lists/pancakeswap-extended.json";
-import top15List from "../lists/pancakeswap-top-15.json";
-import top100tList from "../lists/pancakeswap-top-100.json";
+import srcDefault from "./tokens/yokaiswap-default.json";
+import srcExtended from "./tokens/yokaiswap-extended.json";
+import srcTop100 from "./tokens/yokaiswap-top-100.json";
+import srcTop15 from "./tokens/yokaiswap-top-15.json";
+import defaultList from "../lists/yokaiswap-default.json";
+import extendedtList from "../lists/yokaiswap-extended.json";
+import top15List from "../lists/yokaiswap-top-15.json";
+import top100tList from "../lists/yokaiswap-top-100.json";
 
 const lists = [
   {
-    name: "pancakeswap-default",
+    name: "yokaiswap-default",
     src: srcDefault,
     actual: defaultList,
   },
   {
-    name: "pancakeswap-extended",
+    name: "yokaiswap-extended",
     src: srcExtended,
     actual: extendedtList,
   },
   {
-    name: "pancakeswap-top-15",
+    name: "yokaiswap-top-15",
     src: srcTop15,
     actual: top15List,
   },
   {
-    name: "pancakeswap-top-100",
+    name: "yokaiswap-top-100",
     src: srcTop100,
     actual: top100tList,
   },

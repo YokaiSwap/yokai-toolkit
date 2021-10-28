@@ -1,20 +1,14 @@
 {
-  "https://tokens.pancakeswap.finance/pancakeswap-default.json": {
-    "name": "PancakeSwap Default",
-    "homepage": "https://pancakeswap.finance"
+  "https://tokens.yokaiswap.com/yokaiswap-default.json": {
+    "name": "YokaiSwap Default",
+    "homepage": "https://yokaiswap.com"
   },
-  "https://tokens.pancakeswap.finance/pancakeswap-extended.json": {
-    "name": "PancakeSwap Extended",
-    "homepage": "https://pancakeswap.finance"
-    
+  "https://tokens.yokaiswap.com/yokaiswap-extended.json": {
+    "name": "YokaiSwap Extended",
+    "homepage": "https://yokaiswap.com"
   },
-  "https://tokens.pancakeswap.finance/pancakeswap-top-100.json": {
-    "name": "PancakeSwap Top 100",
-    "homepage": "https://pancakeswap.finance"
-    
-  },
-  "https://tokens.coingecko.com/binance-smart-chain/all.json": {
-    "name": "CoinGecko",
-    "homepage": "https://www.coingecko.com"
+  "https://tokens.yokaiswap.com/yokaiswap-top-100.json": {
+    "name": "YokaiSwap Top 100",
+    "homepage": "https://yokaiswap.com"
   }
 }

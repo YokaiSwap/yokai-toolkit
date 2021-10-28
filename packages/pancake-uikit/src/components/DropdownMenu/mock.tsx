@@ -11,11 +11,6 @@ const ItemsMock: DropdownMenuItems[] = [
     href: "/pool",
   },
   {
-    label: "LP Migration",
-    href: "https://v1exchange.pancakeswap.finance/#/migrate",
-    type: DropdownMenuItemType.EXTERNAL_LINK,
-  },
-  {
     type: DropdownMenuItemType.DIVIDER,
   },
   {

@@ -8,7 +8,7 @@ import Footer from "../../components/Footer";
 import MenuItems from "../../components/MenuItems/MenuItems";
 import { SubMenuItems } from "../../components/SubMenuItems";
 import { useMatchBreakpoints } from "../../hooks";
-import CakePrice from "../../components/CakePrice/CakePrice";
+import YOKPrice from "../../components/YOKPrice/YOKPrice";
 import Logo from "./components/Logo";
 import { MENU_HEIGHT, MOBILE_MENU_HEIGHT } from "./config";
 import { NavProps } from "./types";
@@ -57,14 +57,14 @@ const Menu: React.FC<NavProps> = ({
   toggleTheme,
   currentLang,
   setLang,
-  cakePriceUsd,
+  yokPriceUSD,
   links,
   subLinks,
   footerLinks,
   activeItem,
   activeSubItem,
   langs,
-  buyCakeLabel,
+  buyYOKLabel,
   children,
 }) => {
   const { isMobile } = useMatchBreakpoints();
@@ -82,7 +82,7 @@ const Menu: React.FC<NavProps> = ({
       }
       // Avoid triggering anything at the bottom because of layout shift
       else if (!isBottomOfPage) {
-        if (currentOffset < refPrevOffset.current) {
+        if (currentOffset < refPrevOffset.current || currentOffset <= MENU_HEIGHT) {
           // Has scroll up
           setShowMenu(true);
         } else {
@@ -113,7 +113,7 @@ const Menu: React.FC<NavProps> = ({
         <Flex alignItems="center">
           {!isMobile && (
             <Box mr="12px">
-              <CakePrice cakePriceUsd={cakePriceUsd} />
+              <YOKPrice yokPriceUSD={yokPriceUSD} />
             </Box>
           )}
           <Box mt="4px">
@@ -130,7 +130,7 @@ const Menu: React.FC<NavProps> = ({
         </Flex>
       </StyledNav>
       {subLinks && <SubMenuItems items={subLinks} mt={`${MENU_HEIGHT + 1}px`} activeItem={activeSubItem} />}
-      <BodyWrapper mt={!subLinks ? `${MENU_HEIGHT + 1}px` : "0"}>
+      <BodyWrapper mt={!subLinks ? `${MENU_HEIGHT}px` : "0"}>
         <Inner isPushed={false} showMenu={showMenu}>
           {children}
           <Footer
@@ -140,8 +140,8 @@ const Menu: React.FC<NavProps> = ({
             langs={langs}
             setLang={setLang}
             currentLang={currentLang}
-            cakePriceUsd={cakePriceUsd}
-            buyCakeLabel={buyCakeLabel}
+            yokPriceUSD={yokPriceUSD}
+            buyYOKLabel={buyYOKLabel}
             mb={[`${MOBILE_MENU_HEIGHT}px`, null, "0px"]}
           />
         </Inner>

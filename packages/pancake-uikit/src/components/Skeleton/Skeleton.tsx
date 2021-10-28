@@ -27,7 +27,7 @@ const pulse = keyframes`
 const Root = styled.div<SkeletonProps>`
   min-height: 20px;
   display: block;
-  background-color: ${({ theme }) => theme.colors.backgroundDisabled};
+  background-color: ${({ background, theme }) => (background != null ? background : theme.colors.backgroundDisabled)};
   border-radius: ${({ variant, theme }) => (variant === VARIANT.CIRCLE ? theme.radii.circle : theme.radii.small)};
 
   ${layout}
@@ -55,12 +55,17 @@ const Waves = styled(Root)`
   }
 `;
 
-const Skeleton: React.FC<SkeletonProps> = ({ variant = VARIANT.RECT, animation = ANIMATION.PULSE, ...props }) => {
+const Skeleton: React.FC<SkeletonProps> = ({
+  variant = VARIANT.RECT,
+  animation = ANIMATION.PULSE,
+  background,
+  ...props
+}) => {
   if (animation === ANIMATION.WAVES) {
-    return <Waves variant={variant} {...props} />;
+    return <Waves variant={variant} background={background} {...props} />;
   }
 
-  return <Pulse variant={variant} {...props} />;
+  return <Pulse variant={variant} background={background} {...props} />;
 };
 
 export default Skeleton;

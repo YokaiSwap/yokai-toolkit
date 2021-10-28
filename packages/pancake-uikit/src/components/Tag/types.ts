@@ -7,7 +7,7 @@ export const variants = {
   SUCCESS: "success",
   TEXTDISABLED: "textDisabled",
   TEXTSUBTLE: "textSubtle",
-  BINANCE: "binance",
+  NATIVE_TOKEN: "nativeToken",
   FAILURE: "failure",
   WARNING: "warning",
 } as const;

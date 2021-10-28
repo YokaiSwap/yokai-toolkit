@@ -24,10 +24,12 @@ const AccountModal: React.FC<Props> = ({ account, logout, onDismiss = () => null
       {account}
     </Text>
     <Flex mb="32px">
-      <LinkExternal small href={`https://bscscan.com/address/${account}`} mr="16px">
-        {t("View on BscScan")}
+      <LinkExternal small href={`https://aggron.layerview.io/account/${account.toLowerCase()}`} mr="16px">
+        {t("View on Explorer")}
       </LinkExternal>
-      <CopyToClipboard toCopy={account}>{t("Copy Address")}</CopyToClipboard>
+      <CopyToClipboard toCopy={account} t={t}>
+        {t("Copy Address")}
+      </CopyToClipboard>
     </Flex>
     <Flex justifyContent="center">
       <Button

@@ -2,10 +2,10 @@ import React from "react";
 import { StyledCard, StyledCardInner } from "./StyledCard";
 import { CardProps } from "./types";
 
-const Card: React.FC<CardProps> = ({ ribbon, children, background, ...props }) => {
+const Card: React.FC<CardProps> = ({ ribbon, children, background, innerStyle, ...props }) => {
   return (
     <StyledCard {...props}>
-      <StyledCardInner background={background} hasCustomBorder={!!props.borderBackground}>
+      <StyledCardInner style={innerStyle} background={background} hasCustomBorder={!!props.borderBackground}>
         {ribbon}
         {children}
       </StyledCardInner>

@@ -25,6 +25,7 @@ const getThemeColor = ({ theme, variant = variants.INFO }: ThemedIconLabel) => {
     case variants.SUCCESS:
       return theme.colors.success;
     case variants.INFO:
+      return theme.colors.text;
     default:
       return theme.colors.secondary;
   }

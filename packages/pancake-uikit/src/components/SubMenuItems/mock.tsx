@@ -8,7 +8,7 @@ const SubMenuItemsMock = [
     href: "/",
   },
   {
-    label: "Syrup Pools",
+    label: "Monster Pools",
     href: "/",
   },
   {

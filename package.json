@@ -1,20 +1,20 @@
 {
-  "name": "pancake-toolkit",
+  "name": "yokai-toolkit",
   "version": "1.0.0",
-  "description": "Pancake frontend packages",
+  "description": "Yokai frontend packages",
   "private": true,
   "workspaces": [
     "packages/*"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pancakeswap/pancake-toolkit.git"
+    "url": "git+https://github.com/yokaiswap/yokai-toolkit.git"
   },
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/pancakeswap/pancake-toolkit/issues"
+    "url": "https://github.com/yokaiswap/yokai-toolkit/issues"
   },
-  "homepage": "https://github.com/pancakeswap/pancake-toolkit#readme",
+  "homepage": "https://github.com/yokaiswap/yokai-toolkit#readme",
   "scripts": {
     "build": "lerna run build",
     "test": "lerna run test",

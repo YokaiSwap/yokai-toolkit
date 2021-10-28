@@ -25,7 +25,7 @@ interface BitqueryEntity {
 const blacklist: string[] = [
   // List of default tokens to exclude
   "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c", // WBNB
-  "0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82", // CAKE
+  "0xc5e133E6B01b2C335055576C51A53647B1b9b624", // YOK
   "0xe9e7cea3dedca5984780bafc599bd69add087d56", // BUSD
   "0x55d398326f99059fF775485246999027B3197955", // USDT
   "0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c", // BTCB
@@ -60,7 +60,7 @@ const getDateRange = (): string[] => {
 };
 
 /**
- * Fetch Top100 Tokens traded on PancakeSwap v2, ordered by trading volume,
+ * Fetch Top100 Tokens traded on YokaiSwap v2, ordered by trading volume,
  * for the past 30 days, filtered to remove default / broken tokens.
  *
  * @returns BitqueryEntity[]]
@@ -73,10 +73,10 @@ const getTokens = async (): Promise<BitqueryEntity[]> => {
       "https://graphql.bitquery.io/",
       gql`
         query ($from: ISO8601DateTime, $till: ISO8601DateTime, $blacklist: [String!]) {
-          ethereum(network: bsc) {
+          ethereum(network: gw) {
             dexTrades(
               options: { desc: "Total_USD", limit: 100 }
-              exchangeName: { is: "Pancake v2" }
+              exchangeName: { is: "Yokai v2" }
               baseCurrency: { notIn: $blacklist }
               date: { since: $from, till: $till }
             ) {
@@ -106,17 +106,11 @@ const getTokens = async (): Promise<BitqueryEntity[]> => {
 
 /**
  * Returns the URI of a token logo
- * Note: If present in extended list, use main logo, else fallback to TrustWallet
  *
  * @returns string
  */
 const getTokenLogo = (address: string): string => {
-  // Note: fs.existsSync can't be used here because its not case sensetive
-  if (logoFiles.includes(`${address}.png`)) {
-    return `https://tokens.pancakeswap.finance/images/${address}.png`;
-  }
-
-  return `https://assets.trustwalletapp.com/blockchains/smartchain/assets/${address}/logo.png`;
+  return `https://tokens.yokaiswap.com/images/${address}.png`;
 };
 
 /**
@@ -147,7 +141,7 @@ const main = async (): Promise<void> => {
       return [...list, updatedToken];
     }, []);
 
-    const tokenListPath = `${path.resolve()}/src/tokens/pancakeswap-top-100.json`;
+    const tokenListPath = `${path.resolve()}/src/tokens/yokaiswap-top-100.json`;
     console.info("Saving updated list to ", tokenListPath);
     const stringifiedList = JSON.stringify(sanitizedTokens, null, 2);
     fs.writeFileSync(tokenListPath, stringifiedList);

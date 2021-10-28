@@ -11,22 +11,19 @@ import {
   StyledToolsContainer,
 } from "./styles";
 import { FooterProps } from "./types";
-import { ThemeSwitcher } from "../ThemeSwitcher";
 import LangSelector from "../LangSelector/LangSelector";
-import CakePrice from "../CakePrice/CakePrice";
+import YOKPrice from "../YOKPrice/YOKPrice";
 import { LogoWithTextIcon, ArrowForwardIcon } from "../Svg";
 import { Button } from "../Button";
 import { Colors } from "../..";
 
 const MenuItem: React.FC<FooterProps> = ({
   items,
-  isDark,
-  toggleTheme,
   currentLang,
   langs,
   setLang,
-  cakePriceUsd,
-  buyCakeLabel,
+  yokPriceUSD,
+  buyYOKLabel,
   ...props
 }) => {
   return (
@@ -49,7 +46,7 @@ const MenuItem: React.FC<FooterProps> = ({
                 <StyledListItem key={label}>
                   <Link
                     href={href}
-                    target="_black"
+                    target="_blank"
                     rel="noreferrer noopener"
                     color={isHighlighted ? baseColors.warning : darkColors.text}
                     bold={false}
@@ -71,7 +68,6 @@ const MenuItem: React.FC<FooterProps> = ({
           justifyContent="space-between"
         >
           <Flex order={[2, null, 1]} alignItems="center">
-            <ThemeSwitcher isDark={isDark} toggleTheme={toggleTheme} />
             <LangSelector
               currentLang={currentLang}
               langs={langs}
@@ -82,16 +78,16 @@ const MenuItem: React.FC<FooterProps> = ({
           </Flex>
           <Flex order={[1, null, 2]} mb={["24px", null, "0"]} justifyContent="space-between" alignItems="center">
             <Box mr="20px">
-              <CakePrice cakePriceUsd={cakePriceUsd} color={darkColors.textSubtle as keyof Colors} />
+              <YOKPrice yokPriceUSD={yokPriceUSD} color={darkColors.textSubtle as keyof Colors} />
             </Box>
             <Button
               as="a"
-              href="https://pancakeswap.finance/swap?outputCurrency=0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82"
+              href="https://testnet.yokaiswap.com/swap?outputCurrency=0xc5e133E6B01b2C335055576C51A53647B1b9b624"
               target="_blank"
               scale="sm"
               endIcon={<ArrowForwardIcon color={lightColors.backgroundAlt} />}
             >
-              {buyCakeLabel}
+              {buyYOKLabel}
             </Button>
           </Flex>
         </StyledToolsContainer>

@@ -1,4 +1,4 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useRef, useState } from "react";
 import styled from "styled-components";
 import Overlay from "../../components/Overlay/Overlay";
 import { Handler } from "./types";
@@ -8,7 +8,7 @@ interface ModalsContext {
   nodeId: string;
   modalNode: React.ReactNode;
   setModalNode: React.Dispatch<React.SetStateAction<React.ReactNode>>;
-  onPresent: (node: React.ReactNode, newNodeId: string) => void;
+  onPresent: (node: React.ReactNode, newNodeId: string, customModalDismiss?: () => void) => void;
   onDismiss: Handler;
   setCloseOnOverlayClick: React.Dispatch<React.SetStateAction<boolean>>;
 }
@@ -39,19 +39,26 @@ export const Context = createContext<ModalsContext>({
 const ModalProvider: React.FC = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [modalNode, setModalNode] = useState<React.ReactNode>();
+  const handleModalCustomDismissRef = useRef<() => void>();
   const [nodeId, setNodeId] = useState("");
   const [closeOnOverlayClick, setCloseOnOverlayClick] = useState(true);
 
-  const handlePresent = (node: React.ReactNode, newNodeId: string) => {
+  const handlePresent: ModalsContext["onPresent"] = (node, newNodeId, customModalDismiss) => {
     setModalNode(node);
     setIsOpen(true);
     setNodeId(newNodeId);
+    handleModalCustomDismissRef.current = customModalDismiss;
   };
 
   const handleDismiss = () => {
     setModalNode(undefined);
     setIsOpen(false);
     setNodeId("");
+    const handleModalCustomDismiss = handleModalCustomDismissRef.current;
+    if (handleModalCustomDismiss) {
+      handleModalCustomDismiss();
+      handleModalCustomDismissRef.current = undefined;
+    }
   };
 
   const handleOverlayDismiss = () => {

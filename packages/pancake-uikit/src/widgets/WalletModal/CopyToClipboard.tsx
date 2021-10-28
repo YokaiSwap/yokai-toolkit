@@ -5,6 +5,7 @@ import { CopyIcon } from "../../components/Svg";
 
 interface Props {
   toCopy: string;
+  t: (key: string) => string;
 }
 
 const StyleButton = styled(Text).attrs({ role: "button" })`
@@ -27,7 +28,7 @@ const Tooltip = styled.div<{ isTooltipDisplayed: boolean }>`
   opacity: 0.7;
 `;
 
-const CopyToClipboard: React.FC<Props> = ({ toCopy, children, ...props }) => {
+const CopyToClipboard: React.FC<Props> = ({ toCopy, t, children, ...props }) => {
   const [isTooltipDisplayed, setIsTooltipDisplayed] = useState(false);
 
   const copyToClipboardWithCommand = (content: string) => {
@@ -62,7 +63,7 @@ const CopyToClipboard: React.FC<Props> = ({ toCopy, children, ...props }) => {
     >
       {children}
       <CopyIcon width="20px" color="primary" ml="4px" />
-      <Tooltip isTooltipDisplayed={isTooltipDisplayed}>Copied</Tooltip>
+      <Tooltip isTooltipDisplayed={isTooltipDisplayed}>{t("Copied")}</Tooltip>
     </StyleButton>
   );
 };

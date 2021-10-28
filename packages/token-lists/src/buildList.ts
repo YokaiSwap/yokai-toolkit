@@ -1,14 +1,14 @@
 import fs from "fs";
 import path from "path";
 import { TokenList } from "@uniswap/token-lists";
-import { version as pancakeswapDefaultVersion } from "../lists/pancakeswap-default.json";
-import { version as pancakeswapExtendedVersion } from "../lists/pancakeswap-extended.json";
-import { version as pancakeswapTop15Version } from "../lists/pancakeswap-top-15.json";
-import { version as pancakeswapTop100Version } from "../lists/pancakeswap-top-100.json";
-import pancakeswapDefault from "./tokens/pancakeswap-default.json";
-import pancakeswapExtended from "./tokens/pancakeswap-extended.json";
-import pancakeswapTop100 from "./tokens/pancakeswap-top-100.json";
-import pancakeswapTop15 from "./tokens/pancakeswap-top-15.json";
+import { version as yokaiswapDefaultVersion } from "../lists/yokaiswap-default.json";
+import { version as yokaiswapExtendedVersion } from "../lists/yokaiswap-extended.json";
+import { version as yokaiswapTop15Version } from "../lists/yokaiswap-top-15.json";
+import { version as yokaiswapTop100Version } from "../lists/yokaiswap-top-100.json";
+import yokaiswapDefault from "./tokens/yokaiswap-default.json";
+import yokaiswapExtended from "./tokens/yokaiswap-extended.json";
+import yokaiswapTop100 from "./tokens/yokaiswap-top-100.json";
+import yokaiswapTop15 from "./tokens/yokaiswap-top-15.json";
 
 export enum VersionBump {
   "major" = "major",
@@ -23,41 +23,37 @@ type Version = {
 };
 
 const lists = {
-  "pancakeswap-default": {
-    list: pancakeswapDefault,
-    name: "PancakeSwap Default",
-    keywords: ["pancakeswap", "default"],
-    logoURI:
-      "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82/logo.png",
+  "yokaiswap-default": {
+    list: yokaiswapDefault,
+    name: "YokaiSwap Default",
+    keywords: ["yokaiswap", "default"],
+    logoURI: "https://tokens.yokaiswap.com/images/0xc5e133E6B01b2C335055576C51A53647B1b9b624.png",
     sort: false,
-    currentVersion: pancakeswapDefaultVersion,
+    currentVersion: yokaiswapDefaultVersion,
   },
-  "pancakeswap-extended": {
-    list: pancakeswapExtended,
-    name: "PancakeSwap Extended",
-    keywords: ["pancakeswap", "extended"],
-    logoURI:
-      "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82/logo.png",
+  "yokaiswap-extended": {
+    list: yokaiswapExtended,
+    name: "YokaiSwap Extended",
+    keywords: ["yokaiswap", "extended"],
+    logoURI: "https://tokens.yokaiswap.com/images/0xc5e133E6B01b2C335055576C51A53647B1b9b624.png",
     sort: true,
-    currentVersion: pancakeswapExtendedVersion,
+    currentVersion: yokaiswapExtendedVersion,
   },
-  "pancakeswap-top-100": {
-    list: pancakeswapTop100,
-    name: "PancakeSwap Top 100",
-    keywords: ["pancakeswap", "top 100"],
-    logoURI:
-      "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82/logo.png",
+  "yokaiswap-top-100": {
+    list: yokaiswapTop100,
+    name: "YokaiSwap Top 100",
+    keywords: ["yokaiswap", "top 100"],
+    logoURI: "https://tokens.yokaiswap.com/images/0xc5e133E6B01b2C335055576C51A53647B1b9b624.png",
     sort: true,
-    currentVersion: pancakeswapTop100Version,
+    currentVersion: yokaiswapTop100Version,
   },
-  "pancakeswap-top-15": {
-    list: pancakeswapTop15,
-    name: "PancakeSwap Top 15",
-    keywords: ["pancakeswap", "top 15"],
-    logoURI:
-      "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82/logo.png",
+  "yokaiswap-top-15": {
+    list: yokaiswapTop15,
+    name: "YokaiSwap Top 15",
+    keywords: ["yokaiswap", "top 15"],
+    logoURI: "https://tokens.yokaiswap.com/images/0xc5e133E6B01b2C335055576C51A53647B1b9b624.png",
     sort: true,
-    currentVersion: pancakeswapTop15Version,
+    currentVersion: yokaiswapTop15Version,
   },
 };
 
@@ -87,9 +83,9 @@ export const buildList = (listName: string, versionBump?: VersionBump): TokenLis
     tokens: sort
       ? list.sort((t1, t2) => {
           if (t1.chainId === t2.chainId) {
-            // CAKE first in extended list
-            if ((t1.symbol === "CAKE") !== (t2.symbol === "CAKE")) {
-              return t1.symbol === "CAKE" ? -1 : 1;
+            // YOK first in extended list
+            if ((t1.symbol === "YOK") !== (t2.symbol === "YOK")) {
+              return t1.symbol === "YOK" ? -1 : 1;
             }
             return t1.symbol.toLowerCase() < t2.symbol.toLowerCase() ? -1 : 1;
           }

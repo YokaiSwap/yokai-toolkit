@@ -37,6 +37,7 @@ export type Gradients = {
   violet: string;
   violetAlt: string;
   gold: string;
+  mainBackground: string;
 };
 
 export type Colors = {
@@ -68,7 +69,7 @@ export type Colors = {
   gradients: Gradients;
 
   // Additional colors
-  binance: string;
+  nativeToken: string;
   overlay: string;
   gold: string;
   silver: string;
