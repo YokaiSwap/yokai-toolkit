@@ -35,6 +35,7 @@ export const StyledInput = styled(Input)<{ textAlign?: string }>`
 
   ::placeholder {
     color: ${({ theme }) => theme.colors.textSubtle};
+    opacity: 0.6;
   }
 
   &:focus:not(:disabled) {

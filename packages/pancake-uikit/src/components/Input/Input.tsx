@@ -48,6 +48,7 @@ const Input = styled.input<InputProps>`
 
   &::placeholder {
     color: ${({ theme }) => theme.colors.textSubtle};
+    opacity: 0.6;
   }
 
   &:disabled {
