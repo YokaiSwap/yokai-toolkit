@@ -22,4 +22,5 @@ export type FooterProps = {
   currentLang: string;
   langs: Language[];
   setLang: (lang: Language) => void;
+  hideYOKPrice?: boolean;
 } & FlexProps;

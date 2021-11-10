@@ -30,4 +30,5 @@ export interface NavProps {
   buyYOKLabel: string;
   langs: Language[];
   setLang: (lang: Language) => void;
+  hideYOKPrice?: boolean;
 }

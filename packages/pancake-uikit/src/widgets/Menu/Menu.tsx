@@ -66,6 +66,7 @@ const Menu: React.FC<NavProps> = ({
   langs,
   buyYOKLabel,
   children,
+  hideYOKPrice,
 }) => {
   const { isMobile } = useMatchBreakpoints();
   const [showMenu, setShowMenu] = useState(true);
@@ -111,7 +112,7 @@ const Menu: React.FC<NavProps> = ({
           {!isMobile && <MenuItems items={links} activeItem={activeItem} activeSubItem={activeSubItem} ml="24px" />}
         </Flex>
         <Flex alignItems="center">
-          {!isMobile && (
+          {!hideYOKPrice && !isMobile && (
             <Box mr="12px">
               <YOKPrice yokPriceUSD={yokPriceUSD} />
             </Box>
@@ -143,6 +144,7 @@ const Menu: React.FC<NavProps> = ({
             yokPriceUSD={yokPriceUSD}
             buyYOKLabel={buyYOKLabel}
             mb={[`${MOBILE_MENU_HEIGHT}px`, null, "0px"]}
+            hideYOKPrice={hideYOKPrice}
           />
         </Inner>
       </BodyWrapper>

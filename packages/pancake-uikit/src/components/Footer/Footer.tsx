@@ -24,6 +24,7 @@ const MenuItem: React.FC<FooterProps> = ({
   setLang,
   yokPriceUSD,
   buyYOKLabel,
+  hideYOKPrice,
   ...props
 }) => {
   return (
@@ -77,9 +78,11 @@ const MenuItem: React.FC<FooterProps> = ({
             />
           </Flex>
           <Flex order={[1, null, 2]} mb={["24px", null, "0"]} justifyContent="space-between" alignItems="center">
-            <Box mr="20px">
-              <YOKPrice yokPriceUSD={yokPriceUSD} color={darkColors.textSubtle as keyof Colors} />
-            </Box>
+            {!hideYOKPrice && (
+              <Box mr="20px">
+                <YOKPrice yokPriceUSD={yokPriceUSD} color={darkColors.textSubtle as keyof Colors} />
+              </Box>
+            )}
             <Button
               as="a"
               href="https://testnet.yokaiswap.com/swap?outputCurrency=0xc5e133E6B01b2C335055576C51A53647B1b9b624"
