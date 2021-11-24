@@ -2,10 +2,10 @@
   {
     "name": "Wrapped CKB",
     "symbol": "WCKB",
-    "address": "0x7417e92923952a3d65bffAb3f34D2Bd77497c890",
-    "chainId": 71393,
+    "address": "0xE934f463d026d97F6CE0A10215D0ac4224f0a930",
+    "chainId": 71394,
     "decimals": 8,
-    "logoURI": "https://tokens.yokaiswap.com/images/0x7417e92923952a3d65bffAb3f34D2Bd77497c890.png"
+    "logoURI": "https://tokens.yokaiswap.com/images/0xE934f463d026d97F6CE0A10215D0ac4224f0a930.png"
   },
   {
     "name": "YokaiSwap Token",

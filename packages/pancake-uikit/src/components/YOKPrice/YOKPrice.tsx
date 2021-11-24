@@ -26,7 +26,7 @@ const PriceLink = styled.a`
 const YOKPrice: React.FC<Props> = ({ yokPriceUSD, color = "textSubtle" }) => {
   return yokPriceUSD ? (
     <PriceLink
-      href="https://testnet.yokaiswap.com/swap?outputCurrency=0xc5e133E6B01b2C335055576C51A53647B1b9b624"
+      href="https://www.yokaiswap.com/swap?outputCurrency=0xb02c930C2825A960A50ba4Ab005e8264498b64a0"
       target="_blank"
     >
       <YokaiRoundIcon width="24px" mr="8px" />

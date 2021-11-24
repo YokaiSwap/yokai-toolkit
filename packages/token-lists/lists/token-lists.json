@@ -1,14 +1,14 @@
 {
   "https://tokens.yokaiswap.com/yokaiswap-default.json": {
     "name": "YokaiSwap Default",
-    "homepage": "https://yokaiswap.com"
+    "homepage": "https://www.yokaiswap.com"
   },
   "https://tokens.yokaiswap.com/yokaiswap-extended.json": {
     "name": "YokaiSwap Extended",
-    "homepage": "https://yokaiswap.com"
+    "homepage": "https://www.yokaiswap.com"
   },
   "https://tokens.yokaiswap.com/yokaiswap-top-100.json": {
     "name": "YokaiSwap Top 100",
-    "homepage": "https://yokaiswap.com"
+    "homepage": "https://www.yokaiswap.com"
   }
 }

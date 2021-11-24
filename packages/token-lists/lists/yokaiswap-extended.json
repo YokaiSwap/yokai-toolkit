@@ -1,88 +1,336 @@
 {
   "name": "YokaiSwap Extended",
-  "timestamp": "2021-09-22T10:04:24.018Z",
+  "timestamp": "2021-11-29T09:36:42.763Z",
   "version": {
     "major": 0,
     "minor": 1,
     "patch": 0
   },
-  "logoURI": "https://tokens.yokaiswap.com/images/0xc5e133E6B01b2C335055576C51A53647B1b9b624.png",
+  "logoURI": "https://tokens.yokaiswap.com/images/0xb02c930C2825A960A50ba4Ab005e8264498b64a0.png",
   "keywords": [
     "yokaiswap",
-    "extended"
+    "default"
   ],
   "tokens": [
     {
       "name": "YokaiSwap Token",
       "symbol": "YOK",
-      "address": "0xc5e133E6B01b2C335055576C51A53647B1b9b624",
-      "chainId": 71393,
+      "address": "0xb02c930C2825A960A50ba4Ab005e8264498b64a0",
+      "chainId": 71394,
       "decimals": 18,
-      "logoURI": "https://tokens.yokaiswap.com/images/0xc5e133E6B01b2C335055576C51A53647B1b9b624.png"
+      "logoURI": "https://tokens.yokaiswap.com/images/0xb02c930C2825A960A50ba4Ab005e8264498b64a0.png"
     },
     {
       "name": "NexisDAO CKB",
       "symbol": "dCKB",
-      "address": "0x5716B1187182090d0C5D95d8bc58c71ac8c43C22",
-      "chainId": 71393,
+      "address": "0x53A1964a163f64Da59eFE6A802e35b5529d078E2",
+      "chainId": 71394,
       "decimals": 8,
-      "logoURI": "https://tokens.yokaiswap.com/images/0x5716B1187182090d0C5D95d8bc58c71ac8c43C22.png"
-    },
-    {
-      "name": "Ethereum Tether USD",
-      "symbol": "ethUSDT",
-      "address": "0xeC8bF93B774a353Fd7244A7e427C021287779b77",
-      "chainId": 71393,
-      "decimals": 18,
-      "logoURI": "https://tokens.yokaiswap.com/images/0xeC8bF93B774a353Fd7244A7e427C021287779b77.png"
-    },
-    {
-      "name": "Meow Meow Meow",
-      "symbol": "MEOW",
-      "address": "0x184Fc3C0B889f2a665e2584Fe4c45FEfB35C76A2",
-      "chainId": 71393,
-      "decimals": 18,
-      "logoURI": "https://tokens.yokaiswap.com/images/0x184Fc3C0B889f2a665e2584Fe4c45FEfB35C76A2.png"
-    },
-    {
-      "name": "Solana Tether USD",
-      "symbol": "solUSDT",
-      "address": "0x1A0E713d9c91e23c891BDd9e59Db2f1A307417fb",
-      "chainId": 71393,
-      "decimals": 18,
-      "logoURI": "https://tokens.yokaiswap.com/images/0x1A0E713d9c91e23c891BDd9e59Db2f1A307417fb.png"
+      "logoURI": "https://tokens.yokaiswap.com/images/0x53A1964a163f64Da59eFE6A802e35b5529d078E2.png"
     },
     {
       "name": "NexisDAO TAI",
       "symbol": "TAI",
-      "address": "0x8290f27935A2D353adc834c9F3c5F6ef19635C2D",
-      "chainId": 71393,
+      "address": "0xf4187511D43B90751a28b6811d13AFB49BeF8452",
+      "chainId": 71394,
       "decimals": 8,
-      "logoURI": "https://tokens.yokaiswap.com/images/0x8290f27935A2D353adc834c9F3c5F6ef19635C2D.png"
+      "logoURI": "https://tokens.yokaiswap.com/images/0xf4187511D43B90751a28b6811d13AFB49BeF8452.png"
     },
     {
-      "name": "USD Coin",
-      "symbol": "USDC",
-      "address": "0xca6FcAAA5129aD9e5219397527A17c26E5AD6a6a",
-      "chainId": 71393,
+      "name": "Ethereum",
+      "symbol": "ETH",
+      "address": "0x48aA6F7bEe4C0d3e7d918833894ee83357ae0d4C",
+      "chainId": 71394,
       "decimals": 18,
-      "logoURI": "https://tokens.yokaiswap.com/images/0xca6FcAAA5129aD9e5219397527A17c26E5AD6a6a.png"
+      "logoURI": "https://cryptologos.cc/logos/ethereum-eth-logo.svg?v=002"
     },
     {
       "name": "Tether USD",
       "symbol": "USDT",
-      "address": "0x3380EA6631D4Aa6C6fE0E4eF7600896ad530093A",
-      "chainId": 71393,
+      "address": "0x07a388453944bB54BE709AE505F14aEb5d5cbB2C",
+      "chainId": 71394,
       "decimals": 18,
-      "logoURI": "https://tokens.yokaiswap.com/images/0x3380EA6631D4Aa6C6fE0E4eF7600896ad530093A.png"
+      "logoURI": "https://cryptologos.cc/logos/tether-usdt-logo.svg?v=002"
     },
     {
-      "name": "Wrapped CKB",
-      "symbol": "WCKB",
-      "address": "0x7417e92923952a3d65bffAb3f34D2Bd77497c890",
-      "chainId": 71393,
+      "chainId": 71394,
       "decimals": 8,
-      "logoURI": "https://tokens.yokaiswap.com/images/0x7417e92923952a3d65bffAb3f34D2Bd77497c890.png"
+      "name": "Bitcoin",
+      "symbol": "BTC",
+      "logoURI": "https://cryptologos.cc/logos/bitcoin-btc-logo.svg?v=002",
+      "address": "0x0bd2Ae370ED96d0Da4d96b648C8A64ffac038264"
+    },
+    {
+      "chainId": 71394,
+      "decimals": 8,
+      "name": "Bitcoin Cash",
+      "symbol": "BCH",
+      "logoURI": "https://cryptologos.cc/logos/bitcoin-cash-bch-logo.svg?v=002",
+      "address": "0x7E9b67663254Ec92E7a1541d9eCF38634082C79B"
+    },
+    {
+      "chainId": 71394,
+      "decimals": 10,
+      "name": "Polkadot",
+      "symbol": "DOT",
+      "logoURI": "https://cryptologos.cc/logos/polkadot-new-dot-logo.svg?v=013",
+      "address": "0x73cF05f15FCaf981bc6B83022F1976E4A18d50Da"
+    },
+    {
+      "chainId": 71394,
+      "decimals": 18,
+      "name": "Filecoin",
+      "symbol": "FIL",
+      "logoURI": "https://cryptologos.cc/logos/filecoin-fil-logo.svg?v=002",
+      "address": "0x7961e2C06Dc43BCECE67f4b5d68A71c163486601"
+    },
+    {
+      "chainId": 71394,
+      "decimals": 18,
+      "name": "Dai",
+      "symbol": "DAI",
+      "logoURI": "https://cryptologos.cc/logos/multi-collateral-dai-dai-logo.svg?v=002",
+      "address": "0x128BEc17A6D527cdA1Fab65958F0D7bda17e4Aef"
+    },
+    {
+      "chainId": 71394,
+      "decimals": 18,
+      "name": "Chainlink",
+      "symbol": "LINK",
+      "logoURI": "https://cryptologos.cc/logos/chainlink-link-logo.svg?v=002",
+      "address": "0xdDb9265c0bfdd3076336F314f7636B03AC6333c7"
+    },
+    {
+      "chainId": 71394,
+      "decimals": 18,
+      "name": "Band Protocol",
+      "symbol": "BAND",
+      "logoURI": "https://cryptologos.cc/logos/band-protocol-band-logo.svg?v=013",
+      "address": "0x8Ea9E9b797e9497ab044EeE9Aa286A780fEC1911"
+    },
+    {
+      "chainId": 71394,
+      "decimals": 18,
+      "name": "Basic Attention Token",
+      "symbol": "BAT",
+      "logoURI": "https://cryptologos.cc/logos/basic-attention-token-bat-logo.svg?v=002",
+      "address": "0xDA65D41BA72bDeDB7f7180025797cC9f531dF3CC"
+    },
+    {
+      "chainId": 71394,
+      "decimals": 18,
+      "name": "Synthetix",
+      "symbol": "SNX",
+      "logoURI": "https://cryptologos.cc/logos/synthetix-network-token-snx-logo.svg?v=002",
+      "address": "0x97d4d6dD8fFA0E4F7D0b883E7f9B4E71a9AbEb58"
+    },
+    {
+      "chainId": 71394,
+      "decimals": 18,
+      "name": "Uniswap",
+      "symbol": "UNI",
+      "logoURI": "https://cryptologos.cc/logos/uniswap-uni-logo.svg?v=013",
+      "address": "0x9673Ad4D1a57aaE106e49659Cd35d81A6A4ca70C"
+    },
+    {
+      "chainId": 71394,
+      "decimals": 18,
+      "name": "yearn.finance",
+      "symbol": "YFI",
+      "logoURI": "https://cryptologos.cc/logos/yearn-finance-yfi-logo.svg?v=013",
+      "address": "0xe7c12fB824BBdDD99ffb810bBEF9Fc87bfC84959"
+    },
+    {
+      "chainId": 71394,
+      "decimals": 18,
+      "name": "Binance USD",
+      "symbol": "BUSD",
+      "logoURI": "https://cryptologos.cc/logos/binance-usd-busd-logo.svg?v=002",
+      "address": "0xdAFc31040624D70B2381E59C1AD0AD28112CE79A"
+    },
+    {
+      "chainId": 71394,
+      "decimals": 18,
+      "name": "Compound",
+      "symbol": "COMP",
+      "logoURI": "https://cryptologos.cc/logos/compound-comp-logo.svg?v=013",
+      "address": "0xE0f817Ef8DeD91BfBafc50AB3ec34C30b2c62A6a"
+    },
+    {
+      "chainId": 71394,
+      "decimals": 18,
+      "name": "Maker",
+      "symbol": "MKR",
+      "logoURI": "https://cryptologos.cc/logos/maker-mkr-logo.svg?v=002",
+      "address": "0xF128da0AE9242a4aAebfeE892aCEdE31Cf286D55"
+    },
+    {
+      "chainId": 71394,
+      "decimals": 18,
+      "name": "IoTeX",
+      "symbol": "IOTX",
+      "logoURI": "https://cryptologos.cc/logos/iotex-iotx-logo.svg?v=002",
+      "address": "0xBa4C164CE191522B1eF3FD851e436d8b8d5F178B"
+    },
+    {
+      "chainId": 71394,
+      "decimals": 18,
+      "name": "Bela",
+      "symbol": "BEL",
+      "logoURI": "https://cryptologos.cc/logos/belacoin-bela-logo.svg?v=013",
+      "address": "0x1f8d3551984A2C89030FFcc15BCe2C24878b0c6b"
+    },
+    {
+      "chainId": 71394,
+      "decimals": 18,
+      "name": "Pax Dollar",
+      "symbol": "USDP",
+      "logoURI": "https://cryptologos.cc/logos/paxos-standard-pax-logo.svg?v=002",
+      "address": "0x653239a754B167E8967fE8A3d1444e0Aa6Cd004e"
+    },
+    {
+      "chainId": 71394,
+      "decimals": 6,
+      "name": "USD Coin",
+      "symbol": "USDC",
+      "logoURI": "https://cryptologos.cc/logos/usd-coin-usdc-logo.svg?v=002",
+      "address": "0xC3b946c53E2e62200515d284249f2a91d9DF7954"
+    },
+    {
+      "chainId": 71394,
+      "decimals": 18,
+      "name": "Swipe",
+      "symbol": "SXP",
+      "logoURI": "https://cryptologos.cc/logos/swipe-sxp-logo.svg?v=002",
+      "address": "0x7ab542aB5A31b29D9cB34eC2aa64356C3A36023F"
+    },
+    {
+      "chainId": 71394,
+      "decimals": 18,
+      "name": "Elrond",
+      "symbol": "EGLD",
+      "logoURI": "https://cryptologos.cc/logos/elrond-egld-egld-logo.svg?v=013",
+      "address": "0x403461edb51D6d4D3cD6AbF5148db30Bc5BAAc6F"
+    },
+    {
+      "chainId": 71394,
+      "decimals": 18,
+      "name": "SushiSwap",
+      "symbol": "SUSHI",
+      "logoURI": "https://cryptologos.cc/logos/sushiswap-sushi-logo.svg?v=013",
+      "address": "0x8cbBE0A31D4330B96641Ff3D66a4d5Baae3E3348"
+    },
+    {
+      "chainId": 71394,
+      "decimals": 18,
+      "name": "Aave",
+      "symbol": "AAVE",
+      "logoURI": "https://cryptologos.cc/logos/aave-aave-logo.svg?v=013",
+      "address": "0xc04e95A95DA3507B70D6d150321AeFBf44048462"
+    },
+    {
+      "chainId": 71394,
+      "decimals": 18,
+      "name": "1inch Network",
+      "symbol": "1INCH",
+      "logoURI": "https://cryptologos.cc/logos/1inch-1inch-logo.svg?v=013",
+      "address": "0x5e6242f8730dcFF116D1324043FbeE8106AcC3B9"
+    },
+    {
+      "chainId": 71394,
+      "decimals": 8,
+      "name": "LTO Network",
+      "symbol": "LTO",
+      "logoURI": "https://cryptologos.cc/logos/lto-network-lto-logo.svg?v=002",
+      "address": "0x572136Bfd2c85877CF53EE65D8F2b367bF52DC5E"
+    },
+    {
+      "chainId": 71394,
+      "decimals": 18,
+      "name": "Polygon",
+      "symbol": "MATIC",
+      "logoURI": "https://cryptologos.cc/logos/matic-network-matic-logo.svg?v=002",
+      "address": "0x6DC6fCCB161c2eA8fD9C7647AE7b636e7a6EBCDF"
+    },
+    {
+      "chainId": 71394,
+      "decimals": 18,
+      "name": "Bancor",
+      "symbol": "BNT",
+      "logoURI": "https://cryptologos.cc/logos/bancor-bnt-logo.svg?v=002",
+      "address": "0x3C5b9fAFe6C369aF00007e6324a356109216DeFC"
+    },
+    {
+      "chainId": 71394,
+      "decimals": 18,
+      "name": "bZx Protocol",
+      "symbol": "BZRX",
+      "logoURI": "https://cryptologos.cc/logos/bzx-protocol-bzrx-logo.svg?v=013",
+      "address": "0xc52f7775FDF32b8a97b1160A4BD2688714f589B0"
+    },
+    {
+      "chainId": 71394,
+      "decimals": 18,
+      "name": "Measurable Data Token",
+      "symbol": "MDT",
+      "logoURI": "https://cryptologos.cc/logos/measurable-data-token-mdt-logo.svg?v=013",
+      "address": "0x71d5931a8dFab62d00d58E42230aAECa970711e0"
+    },
+    {
+      "chainId": 71394,
+      "decimals": 18,
+      "name": "pNetwork",
+      "symbol": "PNT",
+      "logoURI": "https://cryptologos.cc/logos/pnetwork-pnt-logo.svg?v=013",
+      "address": "0xD0C94845f8FFEDCCFbdB5446eEf2F4B6a366e00B"
+    },
+    {
+      "chainId": 71394,
+      "decimals": 18,
+      "name": "PERL.eco",
+      "symbol": "PERL",
+      "logoURI": "https://cryptologos.cc/logos/perlin-perl-logo.svg?v=002",
+      "address": "0xC5c6676EFc356629Dd0736a79Ba98c0A96d854c6"
+    },
+    {
+      "chainId": 71394,
+      "decimals": 18,
+      "name": "Balancer",
+      "symbol": "BAL",
+      "logoURI": "https://cryptologos.cc/logos/balancer-bal-logo.svg?v=013",
+      "address": "0x195DC187402959717DAc878e95D93130a62d16fE"
+    },
+    {
+      "chainId": 71394,
+      "decimals": 18,
+      "name": "Bluzelle",
+      "symbol": "BLZ",
+      "logoURI": "https://cryptologos.cc/logos/bluzelle-blz-logo.svg?v=002",
+      "address": "0xf0948768ab0E64c649cBdf910eE7F10b4B11bd12"
+    },
+    {
+      "chainId": 71394,
+      "decimals": 18,
+      "name": "COTI",
+      "symbol": "COTI",
+      "logoURI": "https://cryptologos.cc/logos/coti-coti-logo.svg?v=013",
+      "address": "0x2F354Ad6b31E3E3F631B3CbBe61a262F5139C7fd"
+    },
+    {
+      "chainId": 71394,
+      "decimals": 6,
+      "name": "TRON",
+      "symbol": "TRX",
+      "logoURI": "https://cryptologos.cc/logos/tron-trx-logo.svg?v=002",
+      "address": "0xAA0e6C6Dea0119CDD78666b1e8192bb4583DfF40"
+    },
+    {
+      "chainId": 71394,
+      "decimals": 18,
+      "name": "TrueUSD",
+      "symbol": "TUSD",
+      "logoURI": "https://cryptologos.cc/logos/trueusd-tusd-logo.svg?v=002",
+      "address": "0x9417475FC822a1e4677E2689d73579448B341418"
     }
   ]
 }

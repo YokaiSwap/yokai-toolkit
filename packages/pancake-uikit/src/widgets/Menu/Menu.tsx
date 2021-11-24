@@ -130,7 +130,7 @@ const Menu: React.FC<NavProps> = ({
             <Logo isDark={isDark} href={homeLink?.href ?? "/"} />
             {!isMobile && <MenuItems items={links} activeItem={activeItem} activeSubItem={activeSubItem} ml="24px" />}
           </Flex>
-          <Flex alignItems="center">
+          <Flex alignItems="center" height="100%">
             {!hideYOKPrice && !isMobile && (
               <Box mr="12px">
                 <YOKPrice yokPriceUSD={yokPriceUSD} />
@@ -150,11 +150,7 @@ const Menu: React.FC<NavProps> = ({
           </Flex>
         </StyledNav>
       </FixedContainer>
-      {subLinks && (
-        <Flex justifyContent="space-around">
-          <SubMenuItems items={subLinks} mt={`${totalTopMenuHeight + 1}px`} activeItem={activeSubItem} />
-        </Flex>
-      )}
+      {subLinks && <SubMenuItems items={subLinks} mt={`${totalTopMenuHeight + 1}px`} activeItem={activeSubItem} />}
       <BodyWrapper mt={!subLinks ? `${totalTopMenuHeight + 1}px` : "0"}>
         <Inner isPushed={false} showMenu={showMenu}>
           {children}
