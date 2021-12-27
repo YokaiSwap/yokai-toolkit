@@ -1,6 +1,6 @@
 {
   "name": "@yokaiswap/uikit",
-  "version": "0.54.4",
+  "version": "0.54.6",
   "description": "Set of UI components for yokai projects",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",

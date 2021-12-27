@@ -16,6 +16,7 @@ const BalanceInput: React.FC<BalanceInputProps> = ({
   decimals = 18,
   unit,
   switchEditingUnits,
+  disabled,
   ...props
 }) => {
   const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -30,6 +31,7 @@ const BalanceInput: React.FC<BalanceInputProps> = ({
         <Box>
           <Flex alignItems="center">
             <StyledInput
+              disabled={disabled}
               pattern={`^[0-9]*[.,]?[0-9]{0,${decimals}}$`}
               inputMode="decimal"
               min="0"

@@ -12,6 +12,7 @@ export interface BalanceInputProps extends BoxProps {
   decimals?: number;
   unit?: string;
   switchEditingUnits?: () => void;
+  disabled?: boolean;
 }
 
 export interface TextfieldProps {
