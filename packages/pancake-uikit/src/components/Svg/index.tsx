@@ -139,7 +139,6 @@ export { default as TrophyFillIcon } from "./Icons/TrophyFill";
 export { default as BridgeIcon } from "./Icons/Bridge";
 export { default as NativeTokenIcon } from "./Icons/CKB";
 export { default as DiscordIcon } from "./Icons/Discord";
-export { default as ImTokenCon } from "./Icons/ImToken";
 export { default as ImTokenIcon } from "./Icons/ImToken";
 export { default as BondIcon } from "./Icons/Bond";
 
